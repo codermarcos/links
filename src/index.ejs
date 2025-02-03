@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+
+  <meta name="description" content="<%= descriptions %>">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+
+  <% favIcons.forEach(([rel, file, type, size])=> { %>
+  <link rel="<%= rel %>" href="<%= file %>" <% if (type) { %> type="<%= type %>" <% } %> sizes="<%= size %>">
+  <% }); %>
+
+  <% meta.twitter.forEach(([name, value])=> { %>
+  <meta name="twitter:<%= name %>" content="<%= value %>">
+  <% }); %>
+
+  <% meta.og.forEach(([name, value])=> { %>
+  <meta property="og:<%= name %>" content="<%= value %>">
+  <% }); %>
+
+  <% meta.profile.forEach(([name, value])=> { %>
+  <meta property="profile:<%= name %>" content="<%= value %>">
+  <% }); %>
+
+</head>
+
+<body>
+
+  <header>
+    <picture>
+      <source type="image/webp" srcset="<%= photo.file %>.webp" width="169" height="169" />
+      <source type="<%= photo.type %>" srcset="<%= photo.file %>.<%= photo.ext %>" width="169" height="169" />
+
+      <img src="<%= `${args.photo.file}.${args.photo.ext}` %>" alt="<%= photoAlt %>" />
+    </picture>
+    <hgroup>
+      <h1 class="p-name">
+        <%= title %>
+      </h1>
+      <h2 class="p-skill">
+        <%= subtitle %>
+      </h2>
+    </hgroup>
+  </header>
+
+  <nav>
+    <ul>
+      <% links.forEach(({ name, icon, href, iconTitle })=> { %>
+      <li>
+        <a href="<%= href %>">
+          <figure>
+            <%- require(`./icons/${icon}.ejs`)({ name, iconTitle }) %>
+            <figcaption>
+              <strong><%= name %></strong>
+              <%= href.replace('https://', '') %>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </nav>
+
+</body>
+
+</html>

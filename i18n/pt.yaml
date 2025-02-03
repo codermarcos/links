@@ -1,0 +1,70 @@
+nickname: &nick 'codermarcos'
+title: &title !join ['Contatos de ', *nick]
+
+descriptions: &description !join ['Alguns links importantes de ',  *nick, '! Aqui você pode encontrar | Discord | Twitter | Paypal | Instagram | Meu curriculo | LinkedIn']
+
+subtitle: &description !join ['Alguns links importantes de para entrar em contato com ',  *nick]
+
+sitemap: 
+  - !join ['htttps://', *nick, '.zone']
+  - !join ['https://mr.', *nick, '.zone']
+  - !join ['https://mr.', *nick, '.zone/en']
+
+meta:
+  twitter:
+    - ['card', 'summary']
+  
+    - ['site', !join ['@', *nick]]
+
+    - ['creator', !join ['@', *nick]]
+  
+    - ['title', *title]
+  
+  og: 
+    - ['site_name', *nick]
+
+    - ['type', 'website']
+    
+    - ['locale', 'pt_BR']
+
+    - ['description', *nick]
+
+    - ['image', 'https://avatars.githubusercontent.com/u/12430365?s=460&u=12d4a3464b5a736061dbd0ccca8f57f6d08902d7&v=4']
+
+  profile: 
+    - ['first_name', 'Marcos']
+  
+    - ['last_name', 'Gonçalves De Carvalho Junior']
+
+    - ['gender', 'male']
+
+    - ['username', *nick]
+
+contacts: 
+  phone: &phone '5511971353293'
+
+links: 
+  - name: 'Github'
+    icon: 'github'
+    href: !join ['https://github.com/', *nick]
+    iconTitle: 'Icone do Github'
+
+  - name: 'Curriculo'
+    icon: 'website'
+    href: !join ['https://mr.', *nick, '.zone']
+    iconTitle: 'Icone do meu site'
+
+  - name: 'LinkedIn'
+    icon: 'linkedin'
+    href: !join ['https://linkedin.com/in/', *nick]
+    iconTitle: 'Icone do LinkedIn'
+    
+  - name: 'StackOverflow'
+    icon: 'stackoverflow'
+    href: !join ['https://pt.stackoverflow.com/users/53433/', *nick]
+    iconTitle: 'Icone do StackOverflow'
+
+  - name: 'WhatsApp'
+    icon: 'whatsapp'
+    href: !join ['https://wa.me/', *phone]
+    iconTitle: 'Icone do WhatsApp'

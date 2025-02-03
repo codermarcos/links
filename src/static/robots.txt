@@ -1,0 +1,7 @@
+User-agent: Twitterbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: http://codermarcos.zone/sitemap.xml

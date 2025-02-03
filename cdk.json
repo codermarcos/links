@@ -1,0 +1,23 @@
+{
+    "app": "node --experimental-modules -r @swc-node/register ./iac/app.ts",
+    "context": {
+      "@aws-cdk/core:bootstrapQualifier": "ec45b2f20a"
+    },
+    "watch": {
+      "include": [
+        "**"
+      ],
+      "exclude": [
+        "README.md",
+        "cdk*.json",
+        "**/*.d.ts",
+        "**/*.js",
+        "tsconfig.json",
+        "package*.json",
+        "yarn.lock",
+        "node_modules",
+        "test"
+      ]
+    }
+  }
+  

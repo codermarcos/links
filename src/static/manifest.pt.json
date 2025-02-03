@@ -1,0 +1,23 @@
+{
+  "author": "codermarcos",
+  "short_name": "codermarcos",
+  "name": "Contatos de codermarcos",
+  "start_url": "/?source=pwa",
+  "background_color": "#666666",
+  "display": "standalone",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#666666",
+  "description": "Marcos Gonçalves ou codermarcos é um engenheiro software que ama desafios e resolver problemas, aqui tem pouco de sua carreira."
+}

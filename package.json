@@ -1,0 +1,37 @@
+{
+  "name": "links",
+  "version": "1.0.0",
+  "description": "This project is a simple static site generator for all my contact links.",
+  "config": {
+    "out": "./dist"
+  },
+  "scripts": {
+    "build": "node -r @swc-node/register ./node_modules/webpack/bin/webpack"
+  },
+  "author": {
+    "name": "codermarcos",
+    "email": "coder.marcos@gmail.com",
+    "url": "https://github.com/codermarcos"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aws-solutions-constructs/aws-cloudfront-s3": "^2.70.0",
+    "@swc-node/register": "^1.8.0",
+    "@swc/core": "^1.4.2",
+    "@types/copy-webpack-plugin": "^10.1.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^18.7.18",
+    "aws-cdk": "^2.160.0",
+    "aws-cdk-lib": "^2.160.0",
+    "constructs": "^10.3.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "ejs": "^3.1.9",
+    "ejs-easy-loader": "^0.1.4",
+    "html-webpack-plugin": "^5.6.0",
+    "js-yaml": "^4.1.0",
+    "swc-loader": "^0.2.6",
+    "typescript": "^5.3.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
